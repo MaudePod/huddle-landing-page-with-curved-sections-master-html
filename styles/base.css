@@ -48,6 +48,7 @@ header {
     width: 100%;
     height: 150px;
     background: white;
+    max-width: 1440px;    
     container: header/ inline-size;
 }
 
