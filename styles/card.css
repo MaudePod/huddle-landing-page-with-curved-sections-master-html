@@ -1,0 +1,140 @@
+section[class="card"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: var(--card-height);
+    padding: 1svh 10svw 1svh 10svw;
+    grid-template-rows: 1fr;
+    position: relative;
+    box-sizing: border-box;
+}
+
+section[class="left"] {
+    align-content: center;
+}
+
+section[class="right"] {
+    align-content: center;
+}
+
+section[class="card"] svg {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: 3em;
+}
+
+section[class="card"]:nth-of-type(even) {
+    background-color: var(--very-pale-blue);
+}
+
+section[class="card"]:nth-of-type(even)::before {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: -99px;
+    content: url(../images/bg-section-bottom-desktop-1.svg);
+}
+
+section[class="card"]:nth-of-type(even)::after {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -164px;
+    bottom: 0;
+    content: url(../images/bg-section-top-desktop-1.svg);
+}
+
+section[class="card"] img {
+    display: none;
+}
+
+section[class="ready-to-build"] {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin-bottom: 250px;
+}
+
+section[class="ready-to-build"] h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+section[class="ready-to-build"] button {
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    place-content: center;
+    background-color: var(--pink);
+    padding: 25px 100px;
+    border-radius: 30px;
+    border: 0;
+    color: var(--very-pale-blue);
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+section[class="ready-to-build"] button:hover {
+    filter: brightness(1.2);
+}
+
+@container (inline-size < 1000px) {
+    section[class="card"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: var(--card-height);
+        padding: 1svh 10svw 1svh 10svw;
+        grid-template-rows: 1fr;
+        position: relative;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    section[class="card"]:nth-of-type(even) section[class="left"] {
+        order: 2;
+    }
+
+    section[class="card"]:nth-of-type(even) section[class="right"] {
+        order: 1;
+    }
+
+    section[class="card"] svg {
+        height: 250px;
+    }
+
+    section[class="card"]:nth-of-type(2)::before {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        bottom: -99px;
+        background-image: url(../images/bg-section-bottom-mobile-1.svg);
+        background-size: 100% 100%;
+        content: '';
+        background-repeat: no-repeat;
+    }
+
+    section[class="card"]:nth-of-type(2)::after {
+        top: -99px;
+        background-image: url(../images/bg-section-top-mobile-1.svg);
+        background-size: 100% 100%;
+        content: '';
+        background-repeat: no-repeat;
+    }
+
+    section[class="ready-to-build"] h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+        width: 80%;
+    }
+}

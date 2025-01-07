@@ -1,0 +1,47 @@
+nav {
+    display: grid;
+    height: 100px;
+    padding: 25px 10% 25px 10%;
+    box-sizing: border-box;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+button[id="try-it-free"] {
+    width: min-content;
+    height: min-content;
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-wrap: nowrap;
+    background: transparent;
+    color: var(--light-pink);
+    border: 0;
+    outline-width: 1px;
+    outline-color: var(--light-pink);
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0px 0px 2px 2px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+button[id="try-it-free"]:hover {
+    filter: brightness(1.2);
+}
+
+section[class="logo"] {
+    height: 100px;
+}
+
+section[class="logo"] svg {
+    max-height: 100%;
+    width: 200px;
+}
+@container (inline-size <1000px){
+    button[id="try-it-free"] {
+        padding: 10px 25px;
+    }
+    section[class="logo"] svg {
+        width: 100px;
+    }
+}

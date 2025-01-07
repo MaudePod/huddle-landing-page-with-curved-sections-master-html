@@ -1,0 +1,77 @@
+section[class="hero"] {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+section[class="hero"] p {
+    width: 50%;
+    font-size: 1.4em;
+}
+
+section[class="hero"] button {
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    place-content: center;
+    background-color: var(--pink);
+    padding: 25px 100px;
+    border-radius: 30px;
+    border: 0;
+    color: var(--very-pale-blue);
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+section[class="hero"] button:hover {
+    filter: brightness(1.2);
+}
+
+section[class="stats"] {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 10% 0px;
+}
+
+section[class="stat"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    width: max-content;
+}
+
+span[class="stat-number"] {
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+
+span[class="stat-info"] {
+    font-weight: 400;
+}
+
+@container(inline-size < 1000px) {
+
+    section[class="hero"]>img {
+        width: 80%;
+    }
+
+    section[class="stats"] {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        width: 80%;
+    }
+
+    section[class="hero"] p {
+        width: 80%;
+    }
+}
